@@ -41,12 +41,12 @@ from modelscope import snapshot_download
 # --- VLM 模型 ---
 vlm_model_dir = Path("models/Hunyuan-MT-7B-int4-ov")
 if not vlm_model_dir.exists():
-    snapshot_download("Hunyuan-MT-7B-int4-ovv", local_dir=str(vlm_model_dir))
+    snapshot_download("snake7gun/Hunyuan-MT-7B-int4-ov", local_dir=str(vlm_model_dir))
 
 # --- TTS 模型 ---
 tts_model_dir = Path("models/Qwen3-TTS-CustomVoice-0.6B-fp16-ov")
 if not tts_model_dir.exists():
-    snapshot_download("Qwen3-TTS-CustomVoice-0.6B-fp16-ov", local_dir=str(tts_model_dir))
+    snapshot_download("snake7gun/Qwen3-TTS-CustomVoice-0.6B-fp16-ov", local_dir=str(tts_model_dir))
 ```
   2. 执行多语言翻译
      - 脚本调用示例：`python scripts/translate.py --text "你好世界" --target-lang all --model-dir ./models/Hunyuan-MT-7B-int4-ov`
