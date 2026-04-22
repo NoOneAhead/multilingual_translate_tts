@@ -78,13 +78,9 @@ if not tts_model_dir.exists():
 
 ## 资源索引
 - 脚本:
-  - [scripts/download_models.py](scripts/download_models.py)（用途：从 ModelScope 下载预训练模型；参数：--model-dir 指定模型保存目录）
   - [scripts/translate.py](scripts/translate.py)（用途：多语言文本翻译；参数：--text 输入文本、--target-lang 目标语言、--model-dir 模型路径）
   - [scripts/tts.py](scripts/tts.py)（用途：文本转语音合成；参数：--text 文本、--language 语言、--speaker 说话人、--output 输出文件）
   - [scripts/complete_workflow.py](scripts/complete_workflow.py)（用途：一键完成翻译+语音合成；参数：--text 输入文本、--output-dir 输出目录）
-  - [scripts/workflow_lite.py](scripts/workflow_lite.py)（用途：轻量级翻译工作流；参数：--text 输入文本、--model-dir 模型路径）
-  - [scripts/demo.py](scripts/demo.py)（用途：功能演示和使用流程说明；无需参数）
-  - [scripts/good_morning_demo.py](scripts/good_morning_demo.py)（用途：学习"早上好"的多国发音示例；无需参数）
 - 参考:
   - [references/model-usage.md](references/model-usage.md)（何时读取：需要了解模型参数、说话人列表、支持语言等详细信息时）
 - 资产:无（音频文件由脚本动态生成）
