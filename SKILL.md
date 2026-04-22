@@ -29,7 +29,7 @@ pip install -r requirements.txt
 ```python
 import os
 if not os.path.exists('gradio_helper.py') or not os.path.exists('requirements.txt'):
-    os.system('git clone  https://github.com/NoOneAhead/multilingual_translate_tts')
+    os.system('git clone https://github.com/NoOneAhead/multilingual_translate_tts.git')
     os.chdir('multilingual-tts-assistant')
 ```
   2. 下载模型
