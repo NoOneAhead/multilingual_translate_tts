@@ -36,7 +36,7 @@ if not os.path.exists('gradio_helper.py') or not os.path.exists('requirements.tx
   2. 下载模型
      - 脚本调用示例：`python scripts/download_models.py`
   2. 执行多语言翻译
-     - 脚本调用示例：`python scripts/translate.py --text "晚上好" --target-lang all --model-dir ./models/Hunyuan-MT-7B-int4-ov`
+     - 脚本调用示例：`python scripts/translate.py --text "晚上好" --target-lang all`
      - 返回 4 种语言的翻译结果（JSON 格式）
   3. 生成语音文件
      - 脚本调用示例：`python scripts/tts.py --text "Hello world" --language english --speaker vivian --instruct "友好亲切的语气" --output output/en_hello.wav`
