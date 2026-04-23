@@ -1,5 +1,5 @@
 ---
-name: multilingual-tts-assistant
+name: multilingual_translate_tts
 description: 基于混元翻译模型和通义千问TTS的多语言学习助手；当用户需要将中文翻译成多语言（英/日/韩/德）并生成语音辅助发音学习时使用
 ---
 
