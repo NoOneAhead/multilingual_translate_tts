@@ -42,7 +42,11 @@ if not os.path.exists('gradio_helper.py') or not os.path.exists('requirements.tx
      - 脚本调用示例：`python scripts/tts.py --text "Hello world" --language english --speaker vivian --instruct "友好亲切的语气" --output output/en_hello.wav`
      - 生成指定语言的音频文件
   4. 一键完整流程（推荐）
-     - 脚本调用示例：`python scripts/complete_workflow.py --text "你好世界" --output-dir ./output`
+     - 脚本调用示例：
+`# 一条命令搞定翻译+语音
+python skills\multilingual-tts-assistant\scripts\complete_workflow.py ^
+--text "你想说的话" ^
+--output-dir skills\multilingual-tts-assistant\output\test`
      - 自动完成翻译+语音合成，生成 4 个音频文件
 - 可选分支:
   - 当仅需要翻译：调用 translate.py 并指定 --target-lang 为单一语言（en/ja/ko/de）
