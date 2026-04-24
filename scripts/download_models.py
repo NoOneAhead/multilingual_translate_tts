@@ -23,20 +23,20 @@ def download_model(model_name: str, model_id: str):
     model_dir = MODELS_DIR / model_name
     
     if model_dir.exists():
-        print(f"✓ {model_name} 已存在，跳过下载")
+        print(f"[OK] {model_name} 已存在，跳过下载")
         return
     
-    print(f"\n📥 下载 {model_name}...")
-    print(f"   来源: {model_id}")
+    print(f"\n[DOWNLOAD] 下载 {model_name}...")
+    print(f"   来源：{model_id}")
     
     try:
         from modelscope import snapshot_download
         
         snapshot_download(model_id, local_dir=str(model_dir))
-        print(f"✓ {model_name} 下载完成")
+        print(f"[OK] {model_name} 下载完成")
     except Exception as e:
-        print(f"✗ 下载失败: {e}")
-        print("  请确保已安装: pip install modelscope")
+        print(f"[ERROR] 下载失败：{e}")
+        print("  请确保已安装：pip install modelscope")
 
 
 def download_all_models():
@@ -49,19 +49,19 @@ def download_all_models():
         download_model(model_name, model_id)
     
     print("\n" + "=" * 60)
-    print("✓ 模型下载完成")
+    print("[OK] 模型下载完成")
     print("=" * 60)
 
 
 def check_models():
     """检查模型状态"""
     print("\n模型状态检查:")
-    print(f"模型目录: {MODELS_DIR}")
+    print(f"模型目录：{MODELS_DIR}")
     print("-" * 60)
     
     for model_name in MODELS.keys():
         model_dir = MODELS_DIR / model_name
-        status = "✓ 已下载" if model_dir.exists() else "✗ 未下载"
+        status = "[OK] 已下载" if model_dir.exists() else "[MISSING] 未下载"
         size = ""
         if model_dir.exists():
             # 计算目录大小

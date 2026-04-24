@@ -33,7 +33,7 @@ class TTSGenerator:
                 model_dir=self.model_id,
                 device=self.device,
             )
-            print("✅ 语音合成模型加载完成\n")
+            print("[OK] 语音合成模型加载完成\n")
         except ImportError:
             raise Exception("Qwen3-TTS 未安装，请先运行: pip install -e Qwen3-TTS")
         except Exception as e:

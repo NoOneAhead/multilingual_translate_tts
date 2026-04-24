@@ -24,7 +24,7 @@ class HunyuanMTTranslator:
             from transformers import AutoTokenizer
             self.model = OVModelForCausalLM.from_pretrained(Path(self.model_id), export=False, device=self.device)
             self.tokenizer = AutoTokenizer.from_pretrained(self.model_id)
-            print("✅ 翻译模型加载完成\n")
+            print("[OK] 翻译模型加载完成\n")
         except Exception as e:
             raise Exception(f"模型加载失败: {str(e)}")
 
@@ -46,8 +46,8 @@ class HunyuanMTTranslator:
         trans = re.sub(r'<\|.*?\|>', '', trans)
         trans = re.sub(r'\s+', ' ', trans).strip()[:25]
 
-        if text in fixed:
-            return fixed[text][tgt_lang]
+        # if text in fixed:
+        #     return fixed[text][tgt_lang]
         
         return trans if trans else "[翻译失败]"
 

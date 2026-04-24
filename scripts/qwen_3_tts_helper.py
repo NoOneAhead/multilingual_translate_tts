@@ -100,7 +100,7 @@ def patch_torch_diff_for_openvino():
         masking_utils.find_packed_sequence_indices = patched_find_packed_sequence_indices
         print("✅ Patched torch.diff in masking_utils.find_packed_sequence_indices for OpenVINO compatibility")
     except Exception as e:
-        print(f"⚠️ Could not patch masking_utils: {e}")
+        print(f"[WARNING] Could not patch masking_utils: {e}")
 
 
 # Apply patch before importing Qwen3-TTS
